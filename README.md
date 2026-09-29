@@ -1,9 +1,8 @@
 # Algebra 1 Reference
 
-> 영어권 교과과정(Algebra 1)을 위한 깔끔한 다크 테마 학습 레퍼런스
 > A clean, dark-themed study reference for English-language Algebra 1.
 
-**🔗 Live site: [algebra1learning.vercel.app](https://algebra1learning.vercel.app)**
+**한국어: [README.ko.md](README.ko.md)** · **🔗 Live site: [algebra1learning.vercel.app](https://algebra1learning.vercel.app)**
 
 <p align="center">
   <img src="docs/screenshot-home.webp" alt="Algebra 1 Reference home page" width="49%">
@@ -12,24 +11,22 @@
 
 ---
 
-## 소개 · About
-
-Algebra 1을 공부하다 보면 "그 공식이 뭐였더라?"를 찾느라 교과서와 검색창을 오가게 됩니다. 이 프로젝트는 그 시간을 줄이기 위해 만들었습니다. 10개 챕터, 40개 개념을 **개념 설명 → 핵심 공식 → 풀이 예제**의 일관된 구조로 정리하고, 챕터마다 직접 값을 넣어 확인할 수 있는 계산기를 붙였습니다.
+## About
 
 Studying Algebra 1 often means flipping between a textbook and a search bar just to recall one formula. This project puts everything in one place: **10 chapters, 40 concepts**, each with a plain explanation, the key formulas, and step-by-step worked examples, plus a small interactive calculator per chapter.
 
-## 주요 기능 · Features
+## Features
 
-- **KaTeX 수식 렌더링**: 모든 공식이 교과서처럼 선명하게 표시됩니다.
-- **실시간 검색**: 주제, 공식, 키워드로 즉시 필터링합니다.
-- **풀이 예제**: 문제와 단계별 풀이를 함께 제공합니다.
-- **챕터별 인터랙티브 계산기**: 값을 바꿔 가며 결과를 바로 확인합니다.
-- **다크 테마 & 반응형 UI**: 데스크톱과 모바일 모두에서 읽기 편합니다.
-- **정적 사이트**: 서버와 계정이 없고, 어디에나 배포할 수 있습니다.
+- **KaTeX math rendering**: every formula is crisp and textbook-quality.
+- **Live search**: filter instantly by topic, formula, or keyword.
+- **Worked examples**: problems come with step-by-step solutions.
+- **Interactive calculator per chapter**: change the inputs and see the result immediately.
+- **Dark theme & responsive UI**: comfortable to read on desktop and mobile.
+- **Static site**: no server or accounts; deploy it anywhere.
 
-## 커리큘럼 · Curriculum
+## Curriculum
 
-| # | Chapter | 인터랙티브 |
+| # | Chapter | Interactive |
 |---|---|---|
 | 1 | Foundations: Numbers & Expressions | Distance on a Number Line |
 | 2 | Linear Equations | Two-Step Equation Solver |
@@ -42,13 +39,13 @@ Studying Algebra 1 often means flipping between a textbook and a search bar just
 | 9 | Radicals & the Pythagorean Theorem | Hypotenuse Calculator |
 | 10 | Data Analysis & Statistics | Mean, Median & Range |
 
-## 기술 스택 · Tech Stack
+## Tech Stack
 
 [Vite](https://vitejs.dev) · [React](https://react.dev) · TypeScript · [Tailwind CSS](https://tailwindcss.com) · [shadcn/ui](https://ui.shadcn.com) · [KaTeX](https://katex.org) · Vitest
 
-## 시작하기 · Getting Started
+## Getting Started
 
-Node.js 18 이상이 필요합니다.
+Requires Node.js 18 or later.
 
 ```bash
 git clone https://github.com/jin-codes/Algebra1_Learning.git
@@ -57,57 +54,57 @@ npm install
 npm run dev
 ```
 
-브라우저에서 http://localhost:8080 을 열면 됩니다.
+Then open http://localhost:8080.
 
-| 명령 | 설명 |
+| Command | Description |
 |---|---|
-| `npm run dev` | 개발 서버 |
-| `npm run build` | 프로덕션 빌드 (`dist/`) |
-| `npm run preview` | 빌드 결과 미리보기 |
-| `npm run lint` | ESLint 검사 |
-| `npm test` | Vitest 실행 |
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build (`dist/`) |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
+| `npm test` | Run Vitest |
 
-## 프로젝트 구조 · Project Structure
+## Project Structure
 
 ```
 src/
 ├── data/
-│   ├── curriculum.ts          # 챕터·개념·공식·예제 (콘텐츠는 여기에!)
-│   └── chapterInteractives.ts # 챕터별 계산기 정의
-├── pages/Index.tsx            # 메인 페이지 (검색, 사이드바, 챕터 뷰)
-└── components/ui/             # shadcn/ui 컴포넌트
+│   ├── curriculum.ts          # Chapters, concepts, formulas, examples (content lives here!)
+│   └── chapterInteractives.ts # Per-chapter calculator definitions
+├── pages/Index.tsx            # Main page (search, sidebar, chapter view)
+└── components/ui/             # shadcn/ui components
 ```
 
-콘텐츠가 **데이터 파일에 분리**되어 있어서, 화면 코드를 건드리지 않고 내용만 추가·수정할 수 있습니다.
+Content is **separated into data files**, so you can add or edit material without touching the UI code.
 
-## 기여하기 · Contributing
+## Contributing
 
-오타 수정, 풀이 오류 제보, 새 개념·예제 추가 모두 환영합니다.
+Typo fixes, solution error reports, and new concepts or examples are all welcome.
 
-1. 이 저장소를 Fork 합니다.
-2. 브랜치를 만듭니다. `git checkout -b fix/factoring-example`
-3. `src/data/curriculum.ts`에 개념을 추가하려면 아래 형식을 따릅니다.
+1. Fork this repository.
+2. Create a branch: `git checkout -b fix/factoring-example`
+3. To add a concept to `src/data/curriculum.ts`, follow this shape:
 
    ```ts
    {
      id: "my-concept",
      title: "Concept Title",
      explanation: "Short, plain-language explanation.",
-     formulas: ["ax^2 + bx + c = 0"],            // KaTeX 문법
+     formulas: ["ax^2 + bx + c = 0"],            // KaTeX syntax
      examples: [{ problem: "…", steps: ["…", "…"] }],
-     keywords: ["search", "terms"],               // 검색에 쓰임
+     keywords: ["search", "terms"],               // used by search
    }
    ```
 
-4. `npm run lint && npm run build`가 통과하는지 확인합니다.
-5. Pull Request를 보냅니다.
+4. Make sure `npm run lint && npm run build` passes.
+5. Open a Pull Request.
 
-수학 내용의 오류를 발견했다면 [Issue](https://github.com/jin-codes/Algebra1_Learning/issues)로 알려주세요. 어떤 챕터의 어떤 부분인지 적어주시면 큰 도움이 됩니다.
+If you spot a math error, please open an [Issue](https://github.com/jin-codes/Algebra1_Learning/issues) and say which chapter and section it is in.
 
-## 배포 · Deployment
+## Deployment
 
-Vercel에 GitHub 저장소를 연결해 배포합니다 (Framework: Vite, Build: `npm run build`, Output: `dist`). `main`에 push하면 자동으로 재배포됩니다.
+Deployed on Vercel by connecting the GitHub repository (Framework: Vite, Build: `npm run build`, Output: `dist`). Every push to `main` redeploys automatically.
 
-## 라이선스 · License
+## License
 
 [MIT](LICENSE) © 2026 jin-codes
