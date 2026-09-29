@@ -5,6 +5,11 @@
 
 **🔗 Live site: [algebra1learning.vercel.app](https://algebra1learning.vercel.app)**
 
+<p align="center">
+  <img src="docs/screenshot-home.webp" alt="Algebra 1 Reference home page" width="49%">
+  <img src="docs/screenshot-interactive.webp" alt="Interactive distance calculator" width="49%">
+</p>
+
 ---
 
 ## 소개 · About
