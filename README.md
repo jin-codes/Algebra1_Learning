@@ -3,6 +3,8 @@
 > 영어권 교과과정(Algebra 1)을 위한 깔끔한 다크 테마 학습 레퍼런스
 > A clean, dark-themed study reference for English-language Algebra 1.
 
+**🔗 Live site: [algebra1learning.vercel.app](https://algebra1learning.vercel.app)**
+
 ---
 
 ## 소개 · About
